@@ -1,0 +1,105 @@
+.auth-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+.auth-left {
+  flex: 1;
+  position: relative;
+  background: url('/login-bg.png') center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.auth-brand {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1E1B4B; /* Very Dark Navy */
+  font-size: 24px;
+  font-weight: 800;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  z-index: 10;
+}
+.auth-brand-icon {
+  color: #F97316; /* Orange Link */
+}
+.auth-right {
+  flex: 1;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth-form-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 0 20px;
+}
+.auth-form-container h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.input-group {
+  margin-bottom: 24px;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #475569;
+}
+.input-field {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+.input-field:focus {
+  border-color: #000080;
+}
+.btn-login {
+  width: 100%;
+  background-color: #070B49; /* Dark Navy Blue matching Figma */
+  color: white;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.btn-login:hover {
+  background-color: #050836;
+}
+.otp-container {
+  display: flex;
+  justify-content: space-between;
+}
+.otp-field {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  outline: none;
+}
+.otp-field:focus {
+  border-color: #070B49;
+}

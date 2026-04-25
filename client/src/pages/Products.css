@@ -1,0 +1,242 @@
+.products-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.page-subtitle {
+  color: var(--text-gray);
+  font-size: 14px;
+}
+.add-product-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+.products-container {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 24px;
+  min-height: 500px;
+}
+.tabs-container {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 24px;
+  gap: 32px;
+}
+.tab {
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-gray);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+}
+.tab:hover {
+  color: var(--text-dark);
+}
+.tab.active {
+  color: var(--primary);
+}
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+}
+.table-controls {
+  margin-bottom: 24px;
+}
+.search-box {
+  position: relative;
+  width: 250px;
+}
+.search-box input {
+  width: 100%;
+  padding: 8px 10px 8px 34px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  background-color: #F8FAFC;
+}
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+.product-card {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+.card-image-box {
+  width: 100%;
+  height: 200px;
+  background-color: #F8FAF7;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-color);
+}
+.card-img {
+  max-width: 100%;
+  max-height: 90%;
+  object-fit: contain;
+}
+.card-img-placeholder {
+  color: var(--text-gray);
+  font-size: 14px;
+}
+.carousel-dots {
+  position: absolute;
+  bottom: 8px;
+  display: flex;
+  gap: 4px;
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #E2E8F0;
+}
+.dot.active {
+  background-color: #EF4444; /* Matches red active dot from Figma */
+}
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1E293B;
+}
+.data-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.data-label {
+  color: #64748B;
+  flex: 1;
+}
+.data-value {
+  color: #0F172A;
+  font-weight: 500;
+  text-align: right;
+  flex: 1;
+}
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+}
+.card-footer button {
+  padding: 8px 0;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn-publish-toggle {
+  flex: 1;
+}
+.btn-publish {
+  background-color: #0047FF;
+  color: white;
+}
+.btn-publish:hover {
+  background-color: #023DD6;
+}
+.btn-unpublish {
+  background-color: #22C55E; /* Or #32D74B Figma bright green */
+  color: white;
+}
+.btn-unpublish:hover {
+  background-color: #16a34a;
+}
+.btn-edit {
+  flex: 1;
+  background-color: white;
+  color: #0F172A;
+  border: 1px solid #CBD5E1 !important;
+}
+.btn-edit:hover {
+  background-color: #F1F5F9;
+}
+.btn-del {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  background-color: white;
+  color: #94A3B8;
+  border: 1px solid #CBD5E1 !important;
+}
+.btn-del:hover {
+  color: #EF4444;
+  border-color: #EF4444 !important;
+  background-color: #FEF2F2;
+}
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+.empty-state-icon {
+  margin-bottom: 24px;
+}
+.empty-state h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0F172A;
+  margin-bottom: 8px;
+}
+.empty-state p {
+  font-size: 14px;
+  color: #64748B;
+  line-height: 1.5;
+}
