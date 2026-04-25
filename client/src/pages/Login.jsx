@@ -11,7 +11,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5001/auth/login', { emailOrMobile });
+      await axios.post('https://productr-assignment-gvgf.onrender.com/auth/login', { emailOrMobile });
       localStorage.setItem('authEmail', emailOrMobile);
       navigate('/verify-otp');
     } catch (err) {

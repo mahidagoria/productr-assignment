@@ -13,7 +13,7 @@ const Products = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get('http://localhost:5001/products');
+      const res = await axios.get('https://productr-assignment-gvgf.onrender.com/products');
       setProducts(res.data);
     } catch (err) {
       console.error(err);
@@ -27,7 +27,7 @@ const Products = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
       try {
-        await axios.delete(`http://localhost:5001/products/${id}`);
+        await axios.delete(`https://productr-assignment-gvgf.onrender.com/products/${id}`);
         fetchProducts();
       } catch (err) {
         alert('Failed to delete');
@@ -37,7 +37,7 @@ const Products = () => {
 
   const handleTogglePublish = async (product) => {
     try {
-      await axios.put(`http://localhost:5001/products/${product._id}`, { ...product, published: !product.published });
+      await axios.put(`https://productr-assignment-gvgf.onrender.com/products/${product._id}`, { ...product, published: !product.published });
       fetchProducts();
     } catch (err) {
        alert("Status update failed");

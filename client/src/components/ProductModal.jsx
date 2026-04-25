@@ -22,9 +22,9 @@ const ProductModal = ({ isOpen, onClose, product, onSuccess }) => {
     e.preventDefault();
     try {
       if (isEdit) {
-        await axios.put(`http://localhost:5001/products/${product._id}`, formData);
+        await axios.put(`https://productr-assignment-gvgf.onrender.com/products/${product._id}`, formData);
       } else {
-        await axios.post('http://localhost:5001/products', formData);
+        await axios.post('https://productr-assignment-gvgf.onrender.com/products', formData);
       }
       onSuccess();
       onClose();

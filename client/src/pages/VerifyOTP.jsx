@@ -21,7 +21,7 @@ const VerifyOTP = () => {
     e.preventDefault();
     const otpString = otp.join('');
     try {
-      const res = await axios.post('http://localhost:5001/auth/verify-otp', { emailOrMobile, otp: otpString });
+      const res = await axios.post('https://productr-assignment-gvgf.onrender.com/auth/verify-otp', { emailOrMobile, otp: otpString });
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
       window.location.href = '/products'; 
